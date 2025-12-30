@@ -93,39 +93,51 @@ h4 { font-size: 1.2rem; margin-bottom: 8px; }
 .project a:hover { text-decoration: underline; }
 
 /* =========================
-   Project Gallery (Improved for Screenshots)
+   Screenshot Layout Control
 ========================= */
 .project-gallery {
   display: flex;
-  flex-direction: column;     /* 🔥 one big screenshot per row */
+  flex-direction: column;
   gap: 3rem;
-  margin: 3rem auto;
   max-width: 1200px;
+  margin: 3rem auto;
 }
 
-.project-gallery figure {
-  margin: 0;
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
-}
-
-/* Maintain laptop aspect ratio */
-.project-gallery img {
+/* -------------------------
+   Desktop (Laptop) Screenshots
+------------------------- */
+.project-gallery figure.desktop-shot {
   width: 100%;
-  aspect-ratio: 1915 / 862;   /* 🔥 keeps true screenshot ratio */
-  object-fit: cover;
-  display: block;
 }
 
-/* Caption */
+.project-gallery figure.desktop-shot img {
+  width: 100%;
+  aspect-ratio: 1915 / 862;
+  object-fit: cover;
+}
+
+/* -------------------------
+   Mobile Screenshots
+------------------------- */
+.project-gallery figure.mobile-shot {
+  max-width: 380px;     /* 🔥 phone width */
+  margin: 0 auto;
+}
+
+.project-gallery figure.mobile-shot img {
+  width: 100%;
+  aspect-ratio: 9 / 16; /* 🔥 phone ratio */
+  object-fit: contain; /* prevent cropping */
+  background: #000;    /* optional phone frame look */
+  border-radius: 16px;
+}
+
+/* Captions */
 .project-gallery figcaption {
-  padding: 16px 20px;
-  font-size: 0.95rem;
-  font-weight: 500;
+  padding: 14px;
+  font-size: 0.9rem;
   text-align: center;
-  color: #1f2937;
+  color: #374151;
   background-color: #f9fafb;
 }
 
