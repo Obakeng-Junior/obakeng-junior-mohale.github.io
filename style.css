@@ -96,38 +96,36 @@ h4 { font-size: 1.2rem; margin-bottom: 8px; }
    Project Gallery (Improved for Screenshots)
 ========================= */
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
-  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;     /* 🔥 one big screenshot per row */
+  gap: 3rem;
+  margin: 3rem auto;
+  max-width: 1200px;
 }
 
 .project-gallery figure {
   margin: 0;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
 }
 
-/* FIX: uniform image height */
+/* Maintain laptop aspect ratio */
 .project-gallery img {
   width: 100%;
-  height: 220px;              /* 🔥 Forces consistent height */
-  object-fit: cover;          /* Crops nicely instead of shrinking */
+  aspect-ratio: 1915 / 862;   /* 🔥 keeps true screenshot ratio */
+  object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
 }
 
-.project-gallery figure:hover img {
-  transform: scale(1.05);
-}
-
+/* Caption */
 .project-gallery figcaption {
-  padding: 10px 12px;
-  font-size: 0.85rem;
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
   text-align: center;
-  color: #4b5563;
+  color: #1f2937;
   background-color: #f9fafb;
 }
 
