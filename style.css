@@ -308,17 +308,25 @@ section {
 
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* two columns on desktop */
   gap: 4rem;
   align-items: center;
+  text-align: center; /* center text inside columns */
+  padding: 2rem 1rem;
 }
 
 .about-text p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   color: var(--gray-color);
+  line-height: 1.6; /* better readability */
 }
-
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr; /* single column on tablet/mobile */
+    gap: 2rem;
+  }
+}
 .about-image {
   border-radius: var(--border-radius);
   overflow: hidden;
