@@ -158,4 +158,54 @@
             <div class="screenshot-caption">
               <strong>Admin Dashboard</strong>
               Overview of system usage, calculation statistics, and price update notifications
-           
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/fishprices/fish_price_management.png" alt="Price Management" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Price Management</strong>
+              Admin interface for updating fish prices based on market fluctuations
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/fishprices/fish_report.png" alt="Reporting" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Analytics & Reporting</strong>
+              Data visualization showing fishing trends, popular fish types, and revenue patterns
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-detail-description" style="margin-top: 4rem;">
+      <h3>Technical Implementation:</h3>
+      <p>The application follows the Model-View-Controller pattern with a clean architecture. The backend uses ASP.NET Core with Entity Framework Core for data access. The frontend utilizes Bootstrap for responsive design and includes custom JavaScript for dynamic calculations. The system implements proper validation, error handling, and follows security best practices.</p>
+      
+      <h3>Challenges & Solutions:</h3>
+      <p><strong>Challenge:</strong> Handling fluctuating market prices that change daily.<br>
+      <strong>Solution:</strong> Implemented a price update system with versioning to track historical prices and ensure calculation accuracy.</p>
+      
+      <p><strong>Challenge:</strong> Supporting users with limited internet connectivity.<br>
+      <strong>Solution:</strong> Added offline calculation capability using local storage with sync functionality when connectivity is restored.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="currentYear"></span> Obakeng Junior Mohale. All rights reserved.</p>
+      <p class="copyright">Designed and developed with ❤️ by Obakeng Junior Mohale</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
