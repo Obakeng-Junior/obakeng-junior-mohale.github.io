@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Management System - Project Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-code"></i> <span>Obakeng Junior</span>
+      </a>
+      
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="index.html#education" class="nav-link">Education</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Detail Content -->
+  <div class="project-detail-container">
+    <a href="index.html#projects" class="back-button">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+    
+    <div class="project-detail-header">
+      <h1>Secure User Management System</h1>
+      <div class="project-detail-meta">
+        <span class="project-detail-type">Security Web Application</span>
+        <span class="project-detail-date"><i class="far fa-calendar"></i> Completed: 2024</span>
+      </div>
+      
+      <div class="project-detail-tech">
+        <span class="tech-tag">ASP.NET Core</span>
+        <span class="tech-tag">Security</span>
+        <span class="tech-tag">Authentication</span>
+        <span class="tech-tag">SQL Server</span>
+        <span class="tech-tag">C#</span>
+        <span class="tech-tag">Razor Pages</span>
+        <span class="tech-tag">Bootstrap</span>
+        <span class="tech-tag">Password Hashing</span>
+      </div>
+    </div>
+    
+    <div class="project-detail-description">
+      <p>A security-focused ASP.NET Core MVC web application demonstrating manual authentication implementation without relying on ASP.NET Identity. This project showcases core security concepts including custom password hashing, role-based access control, account locking mechanisms, login attempt auditing, and secure session management.</p>
+      
+      <p>Built as an educational project to understand security fundamentals, this system implements enterprise-level security features from scratch. The application serves as a reference implementation for developers needing to understand authentication and authorization mechanisms at a fundamental level.</p>
+      
+      <h3>Security Features Implemented:</h3>
+      <ul>
+        <li><strong>Custom Authentication System:</strong> Manual implementation without ASP.NET Identity</li>
+        <li><strong>Password Security:</strong> PBKDF2 password hashing with salt generation</li>
+        <li><strong>Role-Based Access Control (RBAC):</strong> Admin, Manager, User roles with granular permissions</li>
+        <li><strong>Account Protection:</strong> Account locking after 5 failed login attempts</li>
+        <li><strong>Login Auditing:</strong> Comprehensive tracking of all authentication attempts</li>
+        <li><strong>Session Management:</strong> Secure session handling with timeout controls</li>
+        <li><strong>CSRF Protection:</strong> Implementation of anti-forgery tokens</li>
+        <li><strong>XSS Prevention:</strong> Input validation and output encoding</li>
+        <li><strong>SQL Injection Protection:</strong> Parameterized queries and stored procedures</li>
+        <li><strong>Security Headers:</strong> Implementation of security-focused HTTP headers</li>
+      </ul>
+      
+      <h3>Technical Architecture:</h3>
+      <p>The application is built with a layered architecture separating concerns between presentation, business logic, and data access layers. Security features are implemented as middleware and services that can be reused across the application. The system includes comprehensive logging and monitoring capabilities for security events.</p>
+      
+      <h3>Educational Value:</h3>
+      <p>This project serves as a comprehensive learning resource for understanding web application security. Each security feature is implemented with clear, documented code that explains the "why" behind security decisions. The project includes detailed comments explaining security considerations and best practices.</p>
+    </div>
+    
+    <div class="project-detail-links">
+      <a href="https://github.com/obakeng-junior/security-feature-mini-project" target="_blank" class="btn btn-primary">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+      <a href="index.html#projects" class="btn btn-outline">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+    
+    <!-- Project Screenshots Section -->
+    <div class="project-screenshots">
+      <h2>Project Screenshots</h2>
+      
+      <div class="screenshot-section">
+        <h3>Authentication & Security Features</h3>
+        
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/login.png" alt="Secure Login" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Secure Login Page</strong>
+              Custom authentication interface with password hashing, CAPTCHA integration, and secure session management
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/account_lockout.png" alt="Account Lockout" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Account Lockout Mechanism</strong>
+              Automatic account locking after multiple failed login attempts with administrator notification
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/password_reset.png" alt="Password Reset" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Secure Password Reset</strong>
+              Token-based password reset system with expiration and single-use tokens
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="screenshot-section">
+        <h3>Admin Dashboard & User Management</h3>
+        
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/admin-dashboard.png" alt="Admin Dashboard" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Admin Security Dashboard</strong>
+              Overview of security metrics, active sessions, and system health monitoring
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/manage-users.png" alt="User Management" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>User Management Interface</strong>
+              Admin panel for managing user accounts, assigning roles, and controlling access permissions
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/add-user.png" alt="Add User" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Secure User Creation</strong>
+              Form for creating new users with role assignment and password strength validation
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="screenshot-section">
+        <h3>Security Monitoring & Audit Features</h3>
+        
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/audit-logs.png" alt="Audit Logs" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Comprehensive Audit Logs</strong>
+              Detailed tracking of all security events including login attempts, password changes, and permission modifications
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/security_alerts.png" alt="Security Alerts" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Security Alert System</strong>
+              Real-time notifications for suspicious activities and security policy violations
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/role_permissions.png" alt="Role Permissions" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Role Permission Management</strong>
+              Granular control over user permissions with hierarchical role-based access control
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="screenshot-section">
+        <h3>User Interface & Access Control</h3>
+        
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/user-dashboard.png" alt="User Dashboard" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>User Dashboard (Restricted Access)</strong>
+              Role-specific dashboard showing only authorized functionality based on user permissions
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/profile_security.png" alt="Security Settings" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>User Security Settings</strong>
+              Interface for users to manage their security preferences, two-factor authentication, and session history
+            </div>
+          </div>
+          
+          <div class="screenshot-item">
+            <img src="assets/images/security-project/access_denied.png" alt="Access Denied" class="screenshot-img">
+            <div class="screenshot-caption">
+              <strong>Access Denied Page</strong>
+              Custom error page for unauthorized access attempts with logging and admin notification
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="project-detail-description" style="margin-top: 4rem;">
+      <h3>Security Best Practices Implemented:</h3>
+      <div class="project-detail-tech" style="margin-bottom: 1.5rem;">
+        <span class="tech-tag">Password Hashing (PBKDF2)</span>
+        <span class="tech-tag">Salt Generation</span>
+        <span class="tech-tag">SQL Injection Prevention</span>
+        <span class="tech-tag">XSS Protection</span>
+        <span class="tech-tag">CSRF Tokens</span>
+        <span class="tech-tag">Secure Headers</span>
+        <span class="tech-tag">Session Timeout</span>
+        <span class="tech-tag">Input Validation</span>
+        <span class="tech-tag">Output Encoding</span>
+      </div>
+      
+      <h3>Learning Outcomes:</h3>
+      <ul>
+        <li>Understanding of cryptographic principles for password security</li>
+        <li>Implementation of secure authentication flows from scratch</li>
+        <li>Design of role-based access control systems</li>
+        <li>Creation of comprehensive audit logging mechanisms</li>
+        <li>Defense against common web application vulnerabilities</li>
+        <li>Implementation of security monitoring and alerting systems</li>
+      </ul>
+      
+      <p style="margin-top: 1.5rem; padding: 1rem; background-color: #f0f9ff; border-left: 4px solid var(--primary-color);">
+        <strong>Note:</strong> This project is intentionally built without ASP.NET Identity to demonstrate understanding of fundamental security concepts. In production environments, using established security frameworks like ASP.NET Identity is recommended for most scenarios.
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="currentYear"></span> Obakeng Junior Mohale. All rights reserved.</p>
+      <p class="copyright">Designed and developed with ❤️ by Obakeng Junior Mohale</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
