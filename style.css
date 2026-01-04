@@ -620,13 +620,11 @@ section {
   text-align: center;
 }
 
-/* Education Section */
-#education {
-  background-color: #f0f9ff;
-}
-
+/* =========================
+   Education Section - Single Logo
+========================= */
 .education-timeline {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
 }
@@ -634,66 +632,305 @@ section {
 .education-timeline::before {
   content: '';
   position: absolute;
-  left: 30px;
+  left: 40px;
   top: 0;
   bottom: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    var(--primary-color) 0%, 
+    var(--primary-color) 50%, 
+    var(--secondary-color) 100%);
 }
 
 .education-item {
   display: flex;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   position: relative;
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateX(10px);
 }
 
 .education-icon {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background-color: var(--white);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 2rem;
-  z-index: 1;
-  box-shadow: var(--shadow);
-  border: 3px solid var(--primary-color);
+  z-index: 2;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--white);
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-.education-icon i {
-  font-size: 1.5rem;
-  color: var(--primary-color);
+.university-logo {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--white);
 }
 
 .education-content {
   background-color: var(--white);
-  padding: 1.5rem;
+  padding: 1.8rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   flex-grow: 1;
+  border-left: 4px solid var(--primary-color);
 }
 
 .education-content h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--dark-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
 }
 
-.education-content p {
-  color: var(--gray-color);
-  margin-bottom: 0.5rem;
+.institution {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+}
+
+.institution i {
+  font-size: 1.1rem;
+}
+
+.education-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.education-status {
+  background-color: #ff9800;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.education-status:before {
+  content: "⌛";
+}
+
+.education-status.completed {
+  background-color: #4caf50;
+}
+
+.education-status.completed:before {
+  content: "✓";
 }
 
 .education-duration {
-  display: inline-block;
-  background-color: var(--primary-light);
+  background-color: #e3f2fd;
   color: var(--primary-dark);
-  padding: 5px 12px;
-  border-radius: 50px;
+  padding: 6px 15px;
+  border-radius: 20px;
   font-weight: 600;
   font-size: 0.9rem;
-  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.education-duration:before {
+  content: "📅";
+}
+
+.education-description {
+  color: var(--gray-color);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.education-description p {
+  margin-bottom: 1.2rem;
+}
+
+.course-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.2rem 0;
+}
+
+.course-tag {
+  background-color: #f0f9ff;
+  color: var(--primary-dark);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #bbdefb;
+  transition: all 0.2s ease;
+}
+
+.course-tag:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.achievement-badge {
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+  color: #ff8f00;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+  border-left: 4px solid #ffb300;
+}
+
+.achievement-badge i {
+  font-size: 1.2rem;
+}
+
+/* University Badge at Bottom */
+.university-badge {
+  max-width: 900px;
+  margin: 4rem auto 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--gray-light);
+}
+
+.badge-logo {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.badge-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.badge-content {
+  flex: 1;
+}
+
+.badge-content h4 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.badge-content p {
+  color: var(--gray-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .education-timeline::before {
+    left: 35px;
+  }
+  
+  .education-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 1.5rem;
+  }
+  
+  .university-badge {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .badge-logo {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-timeline::before {
+    left: 30px;
+  }
+  
+  .education-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+  }
+  
+  .education-content {
+    padding: 1.4rem;
+  }
+  
+  .education-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .education-meta {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .course-highlights {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .education-timeline::before {
+    display: none;
+  }
+  
+  .education-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .education-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .institution {
+    justify-content: center;
+  }
+  
+  .education-status, .education-duration {
+    justify-content: center;
+  }
 }
 /* =========================
    CV Section - PDF Only
